@@ -1,0 +1,227 @@
+{
+  "info": {
+    "_postman_id": "40c17c8d-0fca-4096-92a8-dad39f55bdb6",
+    "name": "platzi-market",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8090/platzi-market/api/products/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "platzi-market",
+            "api",
+            "products",
+            "all"
+          ]
+        }
+      },
+      "response": [] //200:OK
+    },
+    {
+      "name": "Get a product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8090/platzi-market/api/products/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "platzi-market",
+            "api",
+            "products",
+            "10"
+          ]
+        }
+      },
+      "response": [{
+        "productId": 10,
+        "name": "Limón",
+        "categoryId": 1,
+        "price": 350.0,
+        "stock": 425,
+        "active": true,
+        "category": {
+          "categoryId": 1,
+          "category": "Frutas y verduras",
+          "active": true
+        }
+      }] //Status 200 Ok
+    },
+    {
+      "name": "Get products by category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8090/platzi-market/api/products/category/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "platzi-market",
+            "api",
+            "products",
+            "category",
+            "3"
+          ]
+        }
+      },
+      "response": [ {
+        "productId": 20,
+        "name": "Costilla de cerdo",
+        "categoryId": 3,
+        "price": 8600.0,
+        "stock": 70,
+        "active": true,
+        "category": {
+          "categoryId": 3,
+          "category": "Carnes y pescados",
+          "active": true
+        }
+      },
+        {
+          "productId": 22,
+          "name": "Merluza",
+          "categoryId": 3,
+          "price": 23000.0,
+          "stock": 45,
+          "active": true,
+          "category": {
+            "categoryId": 3,
+            "category": "Carnes y pescados",
+            "active": true
+          }
+        },
+        {
+          "productId": 19,
+          "name": "Posta",
+          "categoryId": 3,
+          "price": 7800.0,
+          "stock": 40,
+          "active": true,
+          "category": {
+            "categoryId": 3,
+            "category": "Carnes y pescados",
+            "active": true
+          }
+        },
+        {
+          "productId": 18,
+          "name": "Punta de anca",
+          "categoryId": 3,
+          "price": 12000.0,
+          "stock": 32,
+          "active": true,
+          "category": {
+            "categoryId": 3,
+            "category": "Carnes y pescados",
+            "active": true
+          }
+        },
+        {
+          "productId": 17,
+          "name": "Salmón",
+          "categoryId": 3,
+          "price": 28000.0,
+          "stock": 55,
+          "active": true,
+          "category": {
+            "categoryId": 3,
+            "category": "Carnes y pescados",
+            "active": true
+          }
+        },
+        {
+          "productId": 21,
+          "name": "Tilapia",
+          "categoryId": 3,
+          "price": 17000.0,
+          "stock": 60,
+          "active": true,
+          "category": {
+            "categoryId": 3,
+            "category": "Carnes y pescados",
+            "active": true
+          }
+        }] //Status 200 Ok
+    },
+    {
+      "name": "Create product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"name\": \"Lechuga\",\n        \"categoryId\": 1,\n        \"price\": 2000.0,\n        \"stock\": 60,\n        \"active\": true\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8090/platzi-market/api/products/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "platzi-market",
+            "api",
+            "products",
+            "save"
+          ]
+        }
+      },
+      "response": [{
+        "productId": 53,
+        "name": "Lechuga",
+        "categoryId": 1,
+        "price": 2000.0,
+        "stock": 60,
+        "active": true,
+        "category": null
+      }] //201 CREATED
+    },
+    {
+      "name": "Delete product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8090/platzi-market/api/products/delete/51",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "platzi-market",
+            "api",
+            "products",
+            "delete",
+            "51"
+          ]
+        }
+      },
+      "response": [] //200 OK
+    }
+  ],
+  "protocolProfileBehavior": {},
