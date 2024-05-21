@@ -1,2 +1,2 @@
 # SpringPortfolio
- Projects with sprin
+ Projects with spring
