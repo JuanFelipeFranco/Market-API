@@ -1,6 +1,6 @@
 package com.felipe.market.domain;
 
-public class Product {
+public class   Product {
     private int productId;
     private String name;
     private int categoryId;
